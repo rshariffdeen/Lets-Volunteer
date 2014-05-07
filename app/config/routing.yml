@@ -1,0 +1,20 @@
+spiralation_site:
+    resource: "@SpiralationSiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+spiralation_ngo:
+    resource: "@SpiralationNGOBundle/Resources/config/routing.yml"
+    prefix:   /
+
+spiralation_entity:
+    resource: "@SpiralationEntityBundle/Resources/config/routing.yml"
+    prefix:   /
+
+spiralation_user:
+    resource: "@SpiralationUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+spiralation_styles:
+    resource: "@SpiralationStylesBundle/Resources/config/routing.yml"
+    prefix:   /
+

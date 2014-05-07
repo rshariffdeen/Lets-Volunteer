@@ -1,2 +1,2 @@
 <?php
-header("Location: /letsvolunteer/web/app_dev.php/index");
+header("Location: /letsvolunteer/web/app.php/index");

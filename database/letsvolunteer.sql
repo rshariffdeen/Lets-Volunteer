@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2014 at 09:04 PM
+-- Generation Time: May 07, 2014 at 10:59 PM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.19
 
@@ -79,7 +79,10 @@ CREATE TABLE IF NOT EXISTS `organization_feedback` (
   `event_id` int(11) DEFAULT NULL,
   `rating` float DEFAULT NULL,
   `feedback` text,
-  PRIMARY KEY (`ofeedback_id`)
+  PRIMARY KEY (`ofeedback_id`),
+  KEY `volunteer_id` (`volunteer_id`),
+  KEY `organization_feedback_ibfk_2` (`organization_id`),
+  KEY `organization_feedback_ibfk_3` (`event_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -91,7 +94,8 @@ CREATE TABLE IF NOT EXISTS `organization_feedback` (
 CREATE TABLE IF NOT EXISTS `project` (
   `project_id` int(11) NOT NULL,
   `organization_id` int(11) NOT NULL,
-  PRIMARY KEY (`project_id`)
+  PRIMARY KEY (`project_id`),
+  KEY `c2` (`organization_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -114,6 +118,8 @@ CREATE TABLE IF NOT EXISTS `skills` (
 
 CREATE TABLE IF NOT EXISTS `volunteer` (
   `volunteer_id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
   `first_name` varchar(30) NOT NULL,
   `last_name` varchar(30) NOT NULL,
   `date_of_birth` date NOT NULL,
@@ -143,8 +149,38 @@ CREATE TABLE IF NOT EXISTS `volunteer_feedback` (
   `event_id` int(11) DEFAULT NULL,
   `rating` float DEFAULT NULL,
   `feedback` text,
-  PRIMARY KEY (`vfeedback_id`)
+  PRIMARY KEY (`vfeedback_id`),
+  KEY `c1` (`volunteer_id`),
+  KEY `volunteer_feedback_ibfk_2` (`organization_id`),
+  KEY `volunteer_feedback_ibfk_3` (`event_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `organization_feedback`
+--
+ALTER TABLE `organization_feedback`
+  ADD CONSTRAINT `organization_feedback_ibfk_2` FOREIGN KEY (`organization_id`) REFERENCES `organization` (`organization_id`),
+  ADD CONSTRAINT `organization_feedback_ibfk_3` FOREIGN KEY (`event_id`) REFERENCES `event` (`event_id`),
+  ADD CONSTRAINT `organization_feedback_ibfk_1` FOREIGN KEY (`volunteer_id`) REFERENCES `volunteer` (`volunteer_id`);
+
+--
+-- Constraints for table `project`
+--
+ALTER TABLE `project`
+  ADD CONSTRAINT `c2` FOREIGN KEY (`organization_id`) REFERENCES `organization` (`organization_id`);
+
+--
+-- Constraints for table `volunteer_feedback`
+--
+ALTER TABLE `volunteer_feedback`
+  ADD CONSTRAINT `volunteer_feedback_ibfk_2` FOREIGN KEY (`organization_id`) REFERENCES `organization` (`organization_id`),
+  ADD CONSTRAINT `volunteer_feedback_ibfk_3` FOREIGN KEY (`event_id`) REFERENCES `event` (`event_id`),
+  ADD CONSTRAINT `c1` FOREIGN KEY (`volunteer_id`) REFERENCES `volunteer` (`volunteer_id`),
+  ADD CONSTRAINT `volunteer_feedback_ibfk_1` FOREIGN KEY (`volunteer_id`) REFERENCES `volunteer` (`volunteer_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

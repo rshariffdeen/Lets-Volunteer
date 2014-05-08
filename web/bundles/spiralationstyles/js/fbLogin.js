@@ -1,69 +1,36 @@
-
 window.fbAsyncInit = function() {
-    FB.init({
-        appId      : '878518675507348', // App ID
-        secret : 'c512ef6fe98b408b34683cd1c8d5cbeb',
-        status     : true, // check login status
-        cookie     : true, // enable cookies to allow the server to access the session
-        xfbml      : true  // parse XFBML
-    });
+    FB.init({appId: '878518675507348', status: true, cookie: true, xfbml: true});
 };
+(function() {
+    var e = document.createElement('script');
+    e.type = 'text/javascript';
+    e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+    e.async = true;
+    document.getElementById('fb-root').appendChild(e);
 
-(function(d){
-    var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement('script'); js.id = id; js.async = true;
-    js.src = "//connect.facebook.net/en_US/all.js";
-    ref.parentNode.insertBefore(js, ref);
-}(document));
-
-function Login()
-{
-
-    FB.login(function(response) {
-        if (response.authResponse)
-        {
-            getUserInfo(); // Get User Information.
-
-        } else
-        {
-            console.log('Authorization failed.');
+    FB.Event.subscribe('auth.login', function(response) {
+        login();
+    });
+    FB.Event.subscribe('auth.logout', function(response) {
+        logout();
+    });
+    FB.getLoginStatus(function(response) {
+        if (response.session) {
+            greet();
         }
-    },{scope: 'email'});
+    });
+}());
 
-}
-
-function getUserInfo() {
+function login(){
     FB.api('/me', function(response) {
-
-        //response.name       - User Full name
-        //response.link       - User Facebook URL
-        //response.username   - User name
-        //response.id         - id
-        //response.email      - User email
-
+        alert('You have successfully logged in, '+response.name+"!");
     });
 }
-
-FB.Event.subscribe('auth.authResponseChange', function(response)
-{
-    if (response.status === 'connected')
-    {
-        alert('Connected');
-        //SUCCESS
-    }
-    else if (response.status === 'not_authorized')
-    {
-        alert('Failed');
-        //FAILED
-    } else
-    {
-        //UNKNOWN ERROR. Logged Out
-    }
-});
-
-function Logout()
-{
-    FB.logout(function(){document.location.reload();});
-
+function logout(){
+    alert('You have successfully logged out!');
+}
+function greet(){
+    FB.api('/me', function(response) {
+        alert('Welcome, '+response.name+"!");
+    });
 }

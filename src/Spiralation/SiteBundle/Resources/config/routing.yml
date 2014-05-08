@@ -1,3 +1,7 @@
 spiralation_site_homepage:
     pattern:  /index
-    defaults: { _controller: SpiralationSiteBundle:Default:index }
+    defaults: { _controller: SpiralationSiteBundle:Index:index }
+    
+spiralation_site_loginpage:
+    pattern:  /login
+    defaults: { _controller: SpiralationSiteBundle:Login:index }

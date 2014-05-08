@@ -1,6 +1,7 @@
 <?php
 
 namespace Spiralation\SiteBundle\Controller;
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Spiralation\EntityBundle\Entity\Volunteer;
@@ -14,15 +15,15 @@ class RegisterController extends Controller
 {
     public function VolunteerAction(Request $request)
     {
-       $volunteer = new Volunteer();
-            $form = $this->createForm(new VolunteerType(), $volunteer, array(
-                'action' => $this->generateUrl('create_volunteer'),
-                'attr'  => array(
-                    'class'=>'form-horizontal center'
-                )
-            ));
-            
-      
+        $volunteer = new Volunteer();
+        $form = $this->createForm(new VolunteerType(), $volunteer, array(
+            'action' => $this->generateUrl('create_volunteer'),
+            'attr' => array(
+                'class' => 'form-horizontal center'
+            )
+        ));
+
+
         $form->handleRequest($request);
 
         if ($form->isValid()) {
@@ -32,32 +33,31 @@ class RegisterController extends Controller
             $user->setRole(1);
             $user->setVolunteer($volunteer->getVolunteerId());
             $user->setEmail($volunteer->getEmail());
-        
-        try{
-            $em = $this->getDoctrine()->getManager();
-            $em ->persist($volunteer);
-            $em->persist($user);            
-            $em->flush();
-            }
-            catch(\Exception $e){
+
+            try {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($volunteer);
+                $em->persist($user);
+                $em->flush();
+            } catch (\Exception $e) {
                 echo $e;
                 return $this->render('SpiralationSiteBundle:Index:index.html.twig', array(
-                    'type'  => 'E',
+                    'type' => 'E',
                     'message' => ' Opz! Something went wrong. Please Try again'
-                    
-                    
-        ));
+
+
+                ));
             }
 
             return $this->render('SpiralationSiteBundle:index:index.html.twig', array(
-                    'type'  => 'S',
-                    'message' => ' Congratulations! You are now an Volunteer. You can now sign in'
-                    
-        ));
+                'type' => 'S',
+                'message' => ' Congratulations! You are now an Volunteer. You can now sign in'
+
+            ));
         }
-          
-           return $this->render('SpiralationSiteBundle:Register:register.html.twig', array('form' => $form->createView())); 
-        
+
+        return $this->render('SpiralationSiteBundle:Register:register.html.twig', array('form' => $form->createView()));
+
     }
 
     public function formAndroidAction(Request $request)
@@ -70,48 +70,48 @@ class RegisterController extends Controller
         );
 
         $request = json_encode($test);*/
+        echo $request;
+        if ($request != null) {
+            $volunteer = json_decode($request);
 
-        $volunteer = json_decode($request);
+            $email = $volunteer->email;
+            $password = $volunteer->password;
 
-        $email  = $volunteer->email;
-        $password = $volunteer->password;
+            $volunteer = new Volunteer();
 
-        $volunteer = new Volunteer();
+            $volunteer->setEmail($email);
+            $volunteer->setPassword($password);
 
-        $volunteer->setEmail($email);
-        $volunteer->setPassword($password);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($volunteer);
 
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($volunteer);
+            try {
+                $em->flush();
+            } catch (\Exception $e) {
+                $respond = array(
+                    'status' => 'fail'
+                );
+                return json_encode($respond);
+            }
 
-        try{
-            $em->flush();
-        }
-
-        catch(\Exception $e){
             $respond = array(
-                'status'=>'fail'
+                'status' => 'success'
             );
             return json_encode($respond);
         }
-
-        $respond = array(
-            'status'=>'success'
-        );
-        return json_encode($respond);
     }
-    
-     public function OrganizationAction(Request $request)
+
+    public function OrganizationAction(Request $request)
     {
-       $Organization = new Organization();
-            $form = $this->createForm(new OrganizationType(), $Organization, array(
-                'action' => $this->generateUrl('create_organization'),
-                'attr'  => array(
-                    'class'=>'form-horizontal center'
-                )
-            ));
-            
-       
+        $Organization = new Organization();
+        $form = $this->createForm(new OrganizationType(), $Organization, array(
+            'action' => $this->generateUrl('create_organization'),
+            'attr' => array(
+                'class' => 'form-horizontal center'
+            )
+        ));
+
+
         $form->handleRequest($request);
 
         if ($form->isValid()) {
@@ -121,33 +121,32 @@ class RegisterController extends Controller
             $user->setRole(2);
             $user->setOrganization($Organization->getOrganizationId());
             $user->setEmail($Organization->getEmail());
-        
-        try{
-            $em = $this->getDoctrine()->getManager();
-            $em ->persist($Organization);
-            $em->persist($user);            
-            $em->flush();
-            }
-            catch(\Exception $e){
+
+            try {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($Organization);
+                $em->persist($user);
+                $em->flush();
+            } catch (\Exception $e) {
                 echo $e;
                 return $this->render('SpiralationSiteBundle:Index:index.html.twig', array(
-                    'type'  => 'E',
+                    'type' => 'E',
                     'message' => ' Opz! Something went wrong. Please Try again'
-                    
-                    
-        ));
+
+
+                ));
             }
 
             return $this->render('SpiralationSiteBundle:index:index.html.twig', array(
-                    'type'  => 'S',
-                    'message' => ' Congratulations! Your Organization is added. You can now sign in'
-                    
-        ));
+                'type' => 'S',
+                'message' => ' Congratulations! Your Organization is added. You can now sign in'
+
+            ));
         }
-          
-           return $this->render('SpiralationSiteBundle:Register:register.html.twig', array('form' => $form->createView())); 
-        
+
+        return $this->render('SpiralationSiteBundle:Register:register.html.twig', array('form' => $form->createView()));
+
     }
-    
+
 }
  

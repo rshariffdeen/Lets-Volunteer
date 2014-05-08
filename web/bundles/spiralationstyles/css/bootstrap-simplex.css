@@ -137,6 +137,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   color: #555555;
+  background-image:url('./img/background.jpg');
   background-color: #fbfbfe;
 }
 a {

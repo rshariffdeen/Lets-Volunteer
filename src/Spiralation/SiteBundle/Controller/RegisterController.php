@@ -47,6 +47,47 @@ class RegisterController extends Controller
            return $this->render('SpiralationSiteBundle:Register:register.html.twig', array('form' => $form->createView())); 
         
     }
+
+    public function formAndroidAction(Request $request)
+    {
+        /*$test = array(
+            'email'=>'aa@bb.com',
+            'password'=>'xxza',
+            'userName'=>'userName',
+            'status'=>'OK'
+        );
+
+        $request = json_encode($test);*/
+
+        $volunteer = json_decode($request);
+
+        $email  = $volunteer->email;
+        $password = $volunteer->password;
+
+        $volunteer = new Volunteer();
+
+        $volunteer->setEmail($email);
+        $volunteer->setPassword($password);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($volunteer);
+
+        try{
+            $em->flush();
+        }
+
+        catch(\Exception $e){
+            $respond = array(
+                'status'=>'fail'
+            );
+            return json_encode($respond);
+        }
+
+        $respond = array(
+            'status'=>'success'
+        );
+        return json_encode($respond);
+    }
     
 }
  

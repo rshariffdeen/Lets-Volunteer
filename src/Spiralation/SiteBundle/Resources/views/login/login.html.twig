@@ -86,8 +86,16 @@
                     </fieldset>
                 </form>
             </div><!--/span--><p align="center">
-             <button type="submit" class="btn btn-primary">Login with Facebook</button>&nbsp;&nbsp;&nbsp;
-              <button type="submit" class="btn btn-warning">Login with Google+</button>
+             <button type="submit" class="btn btn-primary" onclick="Login">Login with Facebook</button>&nbsp;&nbsp;&nbsp;
+                <button class="g-signin btn btn-warning"
+                        data-scope="https://www.googleapis.com/auth/plus.login"
+                        data-clientid="982349219563-7c0o30oj67mu6l206td9f7i40afdlcel.apps.googleusercontent.com"
+                        data-callback="onSignInCallback"
+                        data-theme="dark"
+                        data-cookiepolicy="single_host_origin"
+                        data-requestvisibleactions="http://schemas.google.com/AddActivity"
+                        data-width="wide">
+                    Login with Google+</button>
             </p>
         </div><!--/row-->
        
@@ -169,8 +177,10 @@
 	<script src={{asset('bundles/spiralationstyles/js/jquery.history.js')}}></script>
 	<!-- application script for Charisma demo -->
 	<script src={{asset('bundles/spiralationstyles/js/charisma.js')}}></script>
-	
-		
 
+
+    <script src="https://apis.google.com/js/plusone.js"></script>
+    <script src={{asset('bundles/spiralationstyles/js/gplus.js')}}></script>
+<script src={{asset('bundles/spiralationstyles/js/fblogin.js')}}></script>
 </body>
 </html>

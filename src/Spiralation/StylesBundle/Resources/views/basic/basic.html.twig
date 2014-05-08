@@ -68,7 +68,7 @@
                             </script>
         {% endif %}
                             {% endif %}
-                            {% block dashboard %}
+                           
 		<!-- topbar starts -->
 	<div class="navbar">
 		<div class="navbar-inner">
@@ -90,10 +90,10 @@
 		</div>
 	</div>
 	<!-- topbar ends -->
-        {% endblock %}
+        
 		<div class="container-fluid">
 		<div class="row-fluid">
-				
+				 {% block dashboard %}
 			<!-- left menu starts -->
 			<div class="span2 main-menu-span">
 				<div class="well nav-collapse sidebar-nav">
@@ -117,6 +117,7 @@
 					</ul>
 				</div><!--/.well -->
 			</div><!--/span-->
+                        {% endblock %}
 			<!-- left menu ends -->
 			
 			<noscript>
@@ -127,6 +128,8 @@
 			</noscript>
                 </div>
                 </div>
+        
+                        
 			{% block content %}
 			{% endblock %}
                                 <hr>

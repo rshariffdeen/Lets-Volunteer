@@ -1,0 +1,7 @@
+parameters:
+#    spiralation_entity.example.class: Spiralation\EntityBundle\Example
+
+services:
+#    spiralation_entity.example:
+#        class: %spiralation_entity.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

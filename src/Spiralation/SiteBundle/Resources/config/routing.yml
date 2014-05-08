@@ -1,0 +1,3 @@
+spiralation_site_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: SpiralationSiteBundle:Default:index }

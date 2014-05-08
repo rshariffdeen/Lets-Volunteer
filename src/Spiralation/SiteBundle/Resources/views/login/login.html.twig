@@ -50,7 +50,15 @@
 		
 </head>
 
-
+<script>
+        FB.init({
+            appId      : '878518675507348',
+            cookie     : true,  // enable cookies to allow the server to access
+            // the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : 'v2.0' // use version 2.0
+        });
+</script>
 <body>
 <div class="container-fluid">
     <div class="row-fluid">
@@ -86,8 +94,9 @@
                        
                     </fieldset>
                 </form>
+
             </div><!--/span--><p align="center">
-             <button type="submit" class="btn btn-primary" onclick="FB.login()">Login with Facebook</button>&nbsp;&nbsp;&nbsp;
+                <button type="submit" class="btn btn-primary" onclick="FB.login()">Login with Facebook</button>&nbsp;&nbsp;&nbsp;
                 <button class="g-signin btn btn-warning"
                         data-scope="https://www.googleapis.com/auth/plus.login"
                         data-clientid="982349219563-7c0o30oj67mu6l206td9f7i40afdlcel.apps.googleusercontent.com"
@@ -181,9 +190,9 @@
 	<!-- application script for Charisma demo -->
 	<script src={{asset('bundles/spiralationstyles/js/charisma.js')}}></script>
 
-
+<script src={{asset('bundles/spiralationstyles/js/fblogin.js')}}></script>
     <script src="https://apis.google.com/js/plusone.js"></script>
     <script src={{asset('bundles/spiralationstyles/js/gplus.js')}}></script>
-<script src={{asset('bundles/spiralationstyles/js/fblogin.js')}}></script>
+
 </body>
 </html>

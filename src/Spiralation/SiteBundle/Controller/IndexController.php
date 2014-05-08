@@ -8,6 +8,6 @@ class IndexController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('SpiralationSiteBundle:Index:index.html.twig', array("type"=>'S',"message"=>'test'));
+        return $this->render('SpiralationSiteBundle:Index:index.html.twig', array(hhhh"type"=>'S',"message"=>'test'));
     }
 }

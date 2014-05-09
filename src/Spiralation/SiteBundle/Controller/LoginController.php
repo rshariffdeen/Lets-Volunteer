@@ -10,4 +10,5 @@ class LoginController extends Controller
     {
         return $this->render('SpiralationSiteBundle:login:login.html.twig');
     }
+    
 }

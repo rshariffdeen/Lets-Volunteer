@@ -5,3 +5,7 @@ spiralation_site_homepage:
 spiralation_site_loginpage:
     pattern:  /login
     defaults: { _controller: SpiralationSiteBundle:Login:index }
+
+create_volunteer:
+    pattern:  /register
+    defaults: { _controller: SpiralationSiteBundle:Register:form }

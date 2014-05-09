@@ -34,7 +34,7 @@ class LoginController extends Controller
                 if($volunteer != null){
                     $vol_id = $volunteer->getVolunteerId();
                     $session->set('vol_id', $vol_id);
-                    $session->set('name',$volunteer->getFirstName);
+                    $session->set('name',$volunteer->getFirstName());
 
                     return $this->redirect($this->generateUrl('homeV', array('id' => $vol_id)));
                 }elseif($organization != null){

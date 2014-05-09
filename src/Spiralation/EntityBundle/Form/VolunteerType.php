@@ -19,7 +19,17 @@ class VolunteerType extends AbstractType
             ->add('password')
             ->add('firstName')
             ->add('lastName')
-            ->add('dateOfBirth')
+            ->add('dateOfBirth','text',array(
+           
+            'label_attr' => array('class' => 'control-label'),
+                 'label' =>'Date',
+                  
+                'attr'=>array(
+                    'placeholder'=>'date',
+                    'class' => 'input-large datepicker',
+                    'data'  => \Date('today'),
+                    )
+            ))
             ->add('city')
             ->add('contactNumber')
             ->add('profession')
@@ -31,6 +41,34 @@ class VolunteerType extends AbstractType
             ->add('followingOrganizations')
             ->add('rating')
         ;
+        
+        $builder
+            ->add('skills', 'entity', array( 
+            'label'  => 'Skills',
+            'class' => 'SpiralationEntityBundle:Skills',
+            'property' => 'skillname',
+            'attr'  => array(
+               'placeholder' =>'Skills' ,
+               'multiple data-rel' =>"chosen"
+            )
+            ));
+        $builder
+            ->add('causes', 'entity', array( 
+            'label'  => 'Interested Causes',
+            'class' => 'SpiralationEntityBundle:Causes',
+            'property' => 'cause_name',
+            'attr'  => array(
+               'placeholder' =>'Interested Causes' ,
+               'multiple data-rel' =>"chosen"
+            )
+            ));
+        
+         $builder 
+                ->add('submit','submit', array(
+                'label' => 'Register'
+                
+                
+            ));
     }
     
     /**

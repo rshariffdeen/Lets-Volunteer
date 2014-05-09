@@ -1,5 +1,148 @@
 {%  extends "SpiralationStylesBundle:basic:basic.html.twig" %}
+{% block dashboard %}
+{% endblock %}
 {% block content %}
-{{form(form)}}
+
+<div class="container-fluid">
+		<div class="row-fluid">
+                    
+			<noscript>
+				<div class="alert alert-block span6">
+					<h4 class="alert-heading">Warning!</h4>
+					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+				</div>
+			</noscript>
+		
+                        <div id="content" class="span4 center">
+			<!-- content starts -->
+			
+                        <div class="row-fluid">
+                            <div class="box span12">
+                                
+					<div class="box-header well">
+                                            
+						<h2><i class="icon-user"></i> Register Volunteer</h2>
+						
+					</div>
+                                <div class="box-content ">
+                                    
+                          
+                                    <br><br>
+
+                    {{ form_start(form) }}
+                    
+                    <div class="control-group primary">
+      {{form_label(form.firstName, 'First Name',{ 'label_attr': {'class': 'control-label'} })}}
+                        
+                        <div class="controls">
+                        {{form_widget(form.firstName)}}
+                               <span class="help-inline">{{ form_errors(form.firstName) }}</span>
+                       </div></div>
+                                    
+                                     <div class="control-group primary">
+      {{form_label(form.lastName, 'Last Name',{ 'label_attr': {'class': 'control-label'} })}}
+                        
+                        <div class="controls">
+                        {{form_widget(form.lastName)}}
+                               <span class="help-inline">{{ form_errors(form.lastName) }}</span>
+                       </div></div>
+                                    
+                                <div class="control-group primary">
+      {{form_label(form.email, 'Email',{ 'label_attr': {'class': 'control-label'} })}}
+                        
+                        <div class="controls">
+                        {{form_widget(form.email)}}
+                               <span class="help-inline">{{ form_errors(form.email) }}</span>
+                       </div></div>
+                                   
+                                     <div class="control-group primary">
+      {{form_label(form.city, 'City',{ 'label_attr': {'class': 'control-label'} })}}
+                        
+                        <div class="controls">
+                        {{form_widget(form.city)}}
+                               <span class="help-inline">{{ form_errors(form.city) }}</span>
+                       </div></div>
+                                    
+                                     <div class="control-group primary">
+      {{form_label(form.contactNumber, 'Phone Number',{ 'label_attr': {'class': 'control-label'} })}}
+                        
+                        <div class="controls">
+                        {{form_widget(form.contactNumber)}}
+                               <span class="help-inline">{{ form_errors(form.contactNumber) }}</span>
+                       </div></div>
+                                    
+                                    <div class="control-group primary">
+      {{form_label(form.profession, 'Profession',{ 'label_attr': {'class': 'control-label'} })}}
+                        
+                        <div class="controls">
+                        {{form_widget(form.profession)}}
+                               <span class="help-inline">{{ form_errors(form.profession) }}</span>
+                       </div></div>
+                                    
+                                     <div class="control-group primary">
+      {{form_label(form.organization, 'Institution/Company',{ 'label_attr': {'class': 'control-label'} })}}
+                        
+                        <div class="controls">
+                        {{form_widget(form.organization)}}
+                               <span class="help-inline">{{ form_errors(form.organization) }}</span>
+                       </div></div>
+                                    
+                                       <div class="control-group primary">
+      {{form_label(form.skills, 'Skills',{ 'label_attr': {'class': 'control-label'} })}}
+                        
+                        <div class="controls">
+                        {{form_widget(form.skills)}}
+                               <span class="help-inline">{{ form_errors(form.skills) }}</span>
+                       </div></div>
+                                      <div class="control-group primary">
+      {{form_label(form.causes, 'Causes',{ 'label_attr': {'class': 'control-label'} })}}
+                        
+                        <div class="controls">
+                        {{form_widget(form.causes)}}
+                               <span class="help-inline">{{ form_errors(form.causes) }}</span>
+                       </div></div>
+                                    
+                                     <div class="control-group primary">
+      {{form_label(form.dateOfBirth, 'Date of Birth',{ 'label_attr': {'class': 'control-label'} })}}
+                        
+                        <div class="controls">
+                        {{form_widget(form.dateOfBirth,{'value':"now"|date("m/d/Y")})}}
+                               <span class="help-inline">{{ form_errors(form.dateOfBirth) }}</span>
+                       </div></div>
+                                    
+                                 
+                        {{form_widget(form.feedbacks,{'type':'hidden'})}}          
+                       
+                        {{form_widget(form.rating,{'type':'hidden'})}}      
+                                    
+                                    {{form_widget(form.project,{'type':'hidden'})}}     
+                            
+                        {{form_widget(form.followingOrganizations,{'type':'hidden'})}}
+                               
+                                 
+                                      
+                                          
+                                          
+                                          <div class="control-group primary">
+      {{form_label(form.password, 'New Password',{ 'label_attr': {'class': 'control-label'} })}}
+                        
+                        <div class="controls">
+                        {{form_widget(form.password)}}
+                               <span class="help-inline">{{ form_errors(form.password) }}</span>
+                       </div></div>
+                              <div class="control-group primary">         
+      {{form_label(form.password, ' ',{ 'label_attr': {'class': 'control-label'} })}}   
+                        <div class="controls">
+                        {{form_widget(form.submit,{'attr':{'class':'btn btn-success'}})}}                           
+                       </div></div>
+                                    
+                                    
+{{ form_end(form) }}
+                    
+                      
+           </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

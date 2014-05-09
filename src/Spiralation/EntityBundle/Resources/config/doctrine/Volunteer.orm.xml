@@ -13,7 +13,7 @@
     <field name="contactNumber" type="integer" column="contact_number" nullable="false"/>
     <field name="profession" type="string" column="profession" length="30" nullable="false"/>
     <field name="organization" type="string" column="organization" length="30" nullable="false"/>
-    <field name="skills" type="text" column="skills" nullable="false"/>
+    <field name="skills" type="array" column="skills" nullable="false"/>
     <field name="causes" type="array" column="causes" nullable="false"/>
     <field name="feedbacks" type="array" column="feedbacks" nullable="true"/>
     <field name="project" type="array" column="project" nullable="true"/>

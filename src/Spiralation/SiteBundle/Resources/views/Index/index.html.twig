@@ -44,34 +44,18 @@
 					</div>
 					<div class="box-content">
                                             <ul class="dashboard-list">
+                                                {% for i in environment %}
 								<li>
+                                                                    <p align="center">
 									<a href="#">
 										<img class="dashboard-avatar" alt="Usman" src="http://www.gravatar.com/avatar/f0ea51fa1e4fae92608d8affee12f67b.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                  
+										<strong><a href="#">{{i.name}}</a></strong> 
+                                                                                <br><br>
+									 <span class="label label-warning">{{i.rating}}</span>         
+                                                                    </p>
 								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Sheikh Heera" src="http://www.gravatar.com/avatar/3232415a0380253cfffe19163d04acab.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                   
-								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Abdullah" src="http://www.gravatar.com/avatar/46056f772bde7c536e2086004e300a04.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                    
-								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Saruar Ahmed" src="http://www.gravatar.com/avatar/564e1bb274c074dc4f6823af229d9dbb.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                     
-								</li>
+								
+								{% endfor %}
 							</ul>
 						</div>
 						</div>
@@ -84,34 +68,18 @@
 					</div>
 					<div class="box-content">
                                             <ul class="dashboard-list">
+								      {% for i in health %}
 								<li>
+                                                                    <p align="center">
 									<a href="#">
 										<img class="dashboard-avatar" alt="Usman" src="http://www.gravatar.com/avatar/f0ea51fa1e4fae92608d8affee12f67b.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                  
+										<strong><a href="#">{{i.name}}</a></strong> 
+                                                                                <br><br>
+									 <span class="label label-warning">{{i.rating}}</span>         
+                                                                    </p>
 								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Sheikh Heera" src="http://www.gravatar.com/avatar/3232415a0380253cfffe19163d04acab.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                   
-								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Abdullah" src="http://www.gravatar.com/avatar/46056f772bde7c536e2086004e300a04.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                    
-								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Saruar Ahmed" src="http://www.gravatar.com/avatar/564e1bb274c074dc4f6823af229d9dbb.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                     
-								</li>
+								
+								{% endfor %}
 							</ul>
 						</div>
 						</div>
@@ -123,34 +91,18 @@
 					</div>
 					<div class="box-content">
                                             <ul class="dashboard-list">
+								      {% for i in poverty %}
 								<li>
+                                                                    <p align="center">
 									<a href="#">
 										<img class="dashboard-avatar" alt="Usman" src="http://www.gravatar.com/avatar/f0ea51fa1e4fae92608d8affee12f67b.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                  
+										<strong><a href="#">{{i.name}}</a></strong> 
+                                                                                <br><br>
+									 <span class="label label-warning">{{i.rating}}</span>         
+                                                                    </p>
 								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Sheikh Heera" src="http://www.gravatar.com/avatar/3232415a0380253cfffe19163d04acab.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                   
-								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Abdullah" src="http://www.gravatar.com/avatar/46056f772bde7c536e2086004e300a04.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                    
-								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Saruar Ahmed" src="http://www.gravatar.com/avatar/564e1bb274c074dc4f6823af229d9dbb.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                     
-								</li>
+								
+								{% endfor %}
 							</ul>
 						</div>
 						</div>
@@ -162,34 +114,18 @@
 					</div>
 					<div class="box-content">
                                             <ul class="dashboard-list">
+								      {% for i in education %}
 								<li>
+                                                                    <p align="center">
 									<a href="#">
 										<img class="dashboard-avatar" alt="Usman" src="http://www.gravatar.com/avatar/f0ea51fa1e4fae92608d8affee12f67b.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                  
+										<strong><a href="#">{{i.name}}</a></strong> 
+                                                                                <br><br>
+									 <span class="label label-warning">{{i.rating}}</span>         
+                                                                    </p>
 								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Sheikh Heera" src="http://www.gravatar.com/avatar/3232415a0380253cfffe19163d04acab.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                   
-								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Abdullah" src="http://www.gravatar.com/avatar/46056f772bde7c536e2086004e300a04.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                    
-								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Saruar Ahmed" src="http://www.gravatar.com/avatar/564e1bb274c074dc4f6823af229d9dbb.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                     
-								</li>
+								
+								{% endfor %}
 							</ul>
 						</div>
 						</div>
@@ -201,34 +137,18 @@
 					</div>
 					<div class="box-content">
                                             <ul class="dashboard-list">
+								      {% for i in disaster %}
 								<li>
+                                                                    <p align="center">
 									<a href="#">
 										<img class="dashboard-avatar" alt="Usman" src="http://www.gravatar.com/avatar/f0ea51fa1e4fae92608d8affee12f67b.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                  
+										<strong><a href="#">{{i.name}}</a></strong> 
+                                                                                <br><br>
+									 <span class="label label-warning">{{i.rating}}</span>         
+                                                                    </p>
 								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Sheikh Heera" src="http://www.gravatar.com/avatar/3232415a0380253cfffe19163d04acab.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                   
-								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Abdullah" src="http://www.gravatar.com/avatar/46056f772bde7c536e2086004e300a04.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                    
-								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Saruar Ahmed" src="http://www.gravatar.com/avatar/564e1bb274c074dc4f6823af229d9dbb.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                     
-								</li>
+								
+								{% endfor %}
 							</ul>
 						</div>
 						</div>
@@ -240,34 +160,18 @@
 					</div>
 					<div class="box-content">
                                             <ul class="dashboard-list">
+								      {% for i in human %}
 								<li>
+                                                                    <p align="center">
 									<a href="#">
 										<img class="dashboard-avatar" alt="Usman" src="http://www.gravatar.com/avatar/f0ea51fa1e4fae92608d8affee12f67b.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                  
+										<strong><a href="#">{{i.name}}</a></strong> 
+                                                                                <br><br>
+									 <span class="label label-warning">{{i.rating}}</span>         
+                                                                    </p>
 								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Sheikh Heera" src="http://www.gravatar.com/avatar/3232415a0380253cfffe19163d04acab.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                   
-								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Abdullah" src="http://www.gravatar.com/avatar/46056f772bde7c536e2086004e300a04.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                    
-								</li>
-								<li>
-									<a href="#">
-										<img class="dashboard-avatar" alt="Saruar Ahmed" src="http://www.gravatar.com/avatar/564e1bb274c074dc4f6823af229d9dbb.png?s=50"></a>
-										<strong><a href="#">Usman</a></strong> 
-									
-									<strong>Rating:</strong> <span class="label label-warning">Approved</span>                                     
-								</li>
+								
+								{% endfor %}
 							</ul>
 						</div>
 						</div>
@@ -291,46 +195,20 @@
 								  </tr>
 							  </thead>   
 							  <tbody>
+                                                              {% if event is defined %}
+                                                                    {% for i in event %}
 								<tr>
-									<td>Muhammad Usman</td>
-									<td class="center">2012/01/01</td>
-									<td class="center">Member</td>
+									<td>{{i.name}}</td>
+									<td class="center">i.date</td>
+									<td class="center">i.details</td>
 									<td class="center">
-										<span class="label label-success">Active</span>
+										<span class="label label-success">i.status</span>
 									</td>                                       
 								</tr>
-								<tr>
-									<td>White Horse</td>
-									<td class="center">2012/02/01</td>
-									<td class="center">Staff</td>
-									<td class="center">
-										<span class="label label-important">Banned</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Sheikh Heera</td>
-									<td class="center">2012/02/01</td>
-									<td class="center">Admin</td>
-									<td class="center">
-										<span class="label">Inactive</span>
-									</td>                                        
-								</tr>
-								<tr>
-									<td>Saruar</td>
-									<td class="center">2012/03/01</td>
-									<td class="center">Member</td>
-									<td class="center">
-										<span class="label label-warning">Pending</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Sana Amrin</td>
-									<td class="center">2012/01/21</td>
-									<td class="center">Staff</td>
-									<td class="center">
-										<span class="label label-success">Active</span>
-									</td>                                        
-								</tr>                                   
+								
+								{% endfor %}
+								{% endif %}
+								                         
 							  </tbody>
 						 </table>  
 						 <div class="pagination pagination-centered">

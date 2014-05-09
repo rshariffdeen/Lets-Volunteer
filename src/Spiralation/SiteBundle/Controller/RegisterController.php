@@ -37,9 +37,10 @@ class RegisterController extends Controller
             $em = $this->getDoctrine()->getManager();
             $repo = $em->getRepository('SpiralationEntityBundle:Volunteer');
             $em ->persist($volunteer);
-            echo"DONE";
+            $em->flush();
+           
             $Volunteer = $repo->findOneBy(array('email'=>$email));
-            $user->setVolunteer($Volunteer->getVolunteerId());
+            $user->setVolunteer($Volunteer);
             $em->persist($user);            
             $em->flush();
             }

@@ -5,6 +5,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Spiralation\EntityBundle\Entity\Volunteer;
 use Spiralation\EntityBundle\Form\VolunteerType;
+use Spiralation\EntityBundle\Entity\User;
+
+
 class RegisterController extends Controller
 {
     public function formAction(Request $request)
@@ -22,9 +25,16 @@ class RegisterController extends Controller
 
         if ($form->isValid()) {
             $volunteer = $form->getData();
-            $em = $this->getDoctrine()->getManager();            
-            $em->persist($volunteer);
-            try{
+            $user = new User();
+            $user->setPassword($volunteer->getPassword());
+            $user->setRole(1);
+            $user->setVolunteer($volunteer->getVolunteerId());
+            $user->setEmail($volunteer->getEmail());
+        
+        try{
+            $em = $this->getDoctrine()->getManager();
+            $em ->persist($volunteer);
+            $em->persist($user);            
             $em->flush();
             }
             catch(\Exception $e){

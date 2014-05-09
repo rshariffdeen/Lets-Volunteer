@@ -5,11 +5,12 @@
       <index name="c4_idx" columns="volunteer_id"/>
       <index name="c5_idx" columns="organization_id"/>
     </indexes>
-    <id name="email" type="string" column="email" length="20">
+    <id name="id" type="integer" column="id">
       <generator strategy="IDENTITY"/>
     </id>
     <field name="password" type="string" column="password" length="20" nullable="false"/>
     <field name="role" type="integer" column="role" nullable="false"/>
+    <field name="email" type="string" column="email" length="40" nullable="false"/>
     <many-to-one field="organization" target-entity="Organization">
       <join-columns>
         <join-column name="organization_id" referenced-column-name="organization_id"/>

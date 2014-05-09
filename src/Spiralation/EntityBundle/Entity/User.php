@@ -136,4 +136,32 @@ class User
     {
         return $this->volunteer;
     }
+    /**
+     * @var integer
+     */
+    private $id;
+
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return User
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    
+        return $this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }

@@ -19,13 +19,13 @@ class LoginController extends Controller
         if ($request->getMethod() == 'POST') {
 
             $session->clear();
-            $username = $request->get('email');
+            $email = $request->get('username');
             $password = $request->get('password');
 
             $em = $this->getDoctrine()->getManager();
             $repository = $em->getRepository('SpiralationEntityBundle:User');
 
-            $user = $repository->findOneBy(array('username' => $username, 'password' => $password));
+            $user = $repository->findOneBy(array('email' => $email, 'password' => $password));
 
             if($user){
                 $volunteer = $user->getVolunteer();
@@ -34,23 +34,13 @@ class LoginController extends Controller
                 if($volunteer != null){
                     $vol_id = $volunteer->getVolunteerId();
                     $session->set('vol_id', $vol_id);
-                    //session
-                    $login = new Login();
-                    $login->setUsername($username);
-                    $login->setPassword($password);
-                    $session->set('login', $login);
 
-                    return $this->redirect($this->generateUrl('profile', array('vol_id' => $vol_id)));
+                    return $this->redirect($this->generateUrl('homeV', array('id' => $vol_id)));
                 }elseif($organization != null){
                     $org_id = $organization->getOrganizationId();
                     $session->set('org_id',$org_id);
-                    //session
-                    $login = new Login();
-                    $login->setUsername($username);
-                    $login->setPassword($password);
-                    $session->set('login', $login);
 
-                    return $this->redirect($this->generateUrl('profile', array('org_id' => $org_id)));
+                    return $this->redirect($this->generateUrl('homeO', array('id' => $org_id)));
                 }
             }
 

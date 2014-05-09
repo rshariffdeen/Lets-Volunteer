@@ -2,6 +2,7 @@
 
 namespace Spiralation\SiteBundle\Controller;
 
+use Symfony\Component\BrowserKit\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Spiralation\EntityBundle\Entity\Volunteer;
@@ -59,46 +60,35 @@ class RegisterController extends Controller
         return $this->render('SpiralationSiteBundle:Register:register.html.twig', array('form' => $form->createView()));
 
     }
-
+    /**
+     *@Route("/registerAndroid", name="create_volunteer_android")
+     *@Method("POST")
+     *@Template()
+     */
     public function formAndroidAction(Request $request)
     {
-        /*$test = array(
-            'email'=>'aa@bb.com',
-            'password'=>'xxza',
-            'userName'=>'userName',
-            'status'=>'OK'
-        );
-
-        $request = json_encode($test);*/
+        $response = new Response();
         echo $request;
-        if ($request != null) {
-            $volunteer = json_decode($request);
-
-            $email = $volunteer->email;
-            $password = $volunteer->password;
-
+        if($request != null){
             $volunteer = new Volunteer();
+            $volunteer->setEmail($request->get('email'));
+            $volunteer->setPassword($request->get('password'));
 
-            $volunteer->setEmail($email);
-            $volunteer->setPassword($password);
-
+            try{
             $em = $this->getDoctrine()->getManager();
             $em->persist($volunteer);
-
-            try {
-                $em->flush();
-            } catch (\Exception $e) {
-                $respond = array(
-                    'status' => 'fail'
-                );
-                return json_encode($respond);
+            $em->flush();
+            }
+            catch(\Exception $e){
+                $response->setStatusCode(500);
+                return $response;
             }
 
-            $respond = array(
-                'status' => 'success'
-            );
-            return json_encode($respond);
+            $response->setStatusCode(201);
+            return $response;
         }
+        $response->setStatusCode(400);
+        return $response;
     }
 
     public function OrganizationAction(Request $request)

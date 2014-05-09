@@ -1,3 +1,7 @@
-spiralation_user_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: SpiralationUserBundle:Default:index }
+homeO:
+    pattern:  /home
+    defaults: { _controller: SpiralationUserBundle:Home:organization }
+
+homeV:
+    pattern:  /home
+    defaults: { _controller: SpiralationUserBundle:Home:volunteer }

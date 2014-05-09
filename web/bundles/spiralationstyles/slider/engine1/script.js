@@ -36,6 +36,6 @@ function ws_fade(c, a, b) {
 // Obfuscated by Javascript Obfuscator
 // http://javascript-source.com
 //***********************************************
-jQuery("#wowslider-container1").wowSlider({effect: "fade", prev: "", next: "", duration: 33 * 100, delay: 57 * 100, width: 1366, height: 380, autoPlay: true, playPause: false, stopOnHover: false, loop: false, bullets: false, caption: false, captionEffect: "slide", controls: false, onBeforeStep: function (i, c) {
+jQuery("#wowslider-container1").wowSlider({effect: "fade", prev: "", next: "", duration: 33 * 100, delay: 57 * 100, width: 1366, height: 380, autoPlay: true, playPause: false, stopOnHover: false, loop: false, bullets: 0, caption: false, captionEffect: "slide", controls: false, onBeforeStep: function (i, c) {
     return (i + 1 + Math.floor((c - 1) * Math.random()))
 }, images: 0});

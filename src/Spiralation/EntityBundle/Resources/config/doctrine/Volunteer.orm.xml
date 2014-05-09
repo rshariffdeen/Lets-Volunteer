@@ -8,16 +8,16 @@
     <field name="password" type="string" column="password" length="30" nullable="false"/>
     <field name="firstName" type="string" column="first_name" length="30" nullable="false"/>
     <field name="lastName" type="string" column="last_name" length="30" nullable="false"/>
-    <field name="dateOfBirth" type="text" column="date_of_birth" nullable="false"/>
+    <field name="dateOfBirth" type="string" column="date_of_birth" nullable="false"/>
     <field name="city" type="string" column="city" length="30" nullable="false"/>
     <field name="contactNumber" type="integer" column="contact_number" nullable="false"/>
     <field name="profession" type="string" column="profession" length="30" nullable="false"/>
     <field name="organization" type="string" column="organization" length="30" nullable="false"/>
-    <field name="skills" type="array" column="skills" length="100" nullable="false"/>
-    <field name="causes" type="array" column="causes" length="100" nullable="false"/>
-    <field name="feedbacks" type="array" column="feedbacks" length="1000" nullable="true"/>
-    <field name="project" type="array" column="project" length="1000" nullable="true"/>
-    <field name="followingOrganizations" type="array" column="following_organizations" length="1000" nullable="true"/>
+    <field name="skills" type="array" column="skills" nullable="false"/>
+    <field name="causes" type="array" column="causes" nullable="false"/>
+    <field name="feedbacks" type="array" column="feedbacks" nullable="true"/>
+    <field name="project" type="array" column="project" nullable="true"/>
+    <field name="followingOrganizations" type="array" column="following_organizations" nullable="true"/>
     <field name="rating" type="float" column="rating" precision="10" scale="0" nullable="true"/>
   </entity>
 </doctrine-mapping>

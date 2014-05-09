@@ -21,7 +21,7 @@
                                 
 					<div class="box-header well">
                                             
-						<h2><i class="icon-user"></i> Register Organization</h2>
+						<h2><i class="icon-suitcase"></i> Register Organization</h2>
 						
 					</div>
                                 <div class="box-content ">
@@ -32,7 +32,7 @@
                     {{ form_start(form) }}
                     
                     <div class="control-group primary">
-      {{form_label(form.name, 'First Name',{ 'label_attr': {'class': 'control-label'} })}}
+      {{form_label(form.name, 'Name',{ 'label_attr': {'class': 'control-label'} })}}
                         
                         <div class="controls">
                         {{form_widget(form.name)}}
@@ -40,7 +40,7 @@
                        </div></div>
                                     
                                      <div class="control-group primary">
-      {{form_label(form.details, 'Last Name',{ 'label_attr': {'class': 'control-label'} })}}
+      {{form_label(form.details, 'Description',{ 'label_attr': {'class': 'control-label'} })}}
                         
                         <div class="controls">
                         {{form_widget(form.details)}}
@@ -72,7 +72,7 @@
                        </div></div>
                                     
                                     <div class="control-group primary">
-      {{form_label(form.type, 'Profession',{ 'label_attr': {'class': 'control-label'} })}}
+      {{form_label(form.type, 'Type',{ 'label_attr': {'class': 'control-label'} })}}
                         
                         <div class="controls">
                         {{form_widget(form.type)}}

@@ -10,10 +10,6 @@ create_volunteer:
     pattern:  /register
     defaults: { _controller: SpiralationSiteBundle:Register:volunteer }
 
-create_volunteer_android:
-    pattern:  /registerAndroid
-    defaults: { _controller: SpiralationSiteBundle:Register:formAndroid }
-
 create_organization:
     pattern:  /addorganization
     defaults: { _controller: SpiralationSiteBundle:Register:organization }

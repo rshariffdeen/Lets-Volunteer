@@ -267,7 +267,7 @@ CREATE TABLE `volunteer_feedback` (
   CONSTRAINT `volunteer_feedback_ibfk_2` FOREIGN KEY (`organization_id`) REFERENCES `organization` (`organization_id`),
   CONSTRAINT `volunteer_feedback_ibfk_3` FOREIGN KEY (`event_id`) REFERENCES `event` (`event_id`),
   CONSTRAINT `c1` FOREIGN KEY (`volunteer_id`) REFERENCES `volunteer` (`volunteer_id`),
-  CONSTRAINT `volunteer_feedback_ibfk_1` FOREIGN KEY (`volunteer_id`) REFERENCES `volunteer` (`volunteer_id`)
+
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Spiralation\EntityBundle\Entity\Skills" table="skills">
+    <id name="skillId" type="integer" column="skill_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="skillName" type="string" column="skill_name" length="30" nullable="true"/>
+    <field name="skilledVolunteers" type="string" column="skilled_volunteers" length="100" nullable="true"/>
+  </entity>
+</doctrine-mapping>

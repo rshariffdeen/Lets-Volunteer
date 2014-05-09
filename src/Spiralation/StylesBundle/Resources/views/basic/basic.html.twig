@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 	
@@ -81,8 +82,22 @@
                             <!--a class="brand" href="{{path('spiralation_site_homepage')}}"> <img src="{{asset('bundles/spiralationstyles/img/logo3.png')}}" /></a-->
 
 				<div class="pull-right" >
-                                    <a href="{{path('spiralation_site_loginpage')}}"><button class="btn btn-mini btn-success"> Login</button></a>
-					
+                                    {% if id is defined %}
+                                    <div class="btn-group pull-right" >
+					<a data-toggle="dropdown" href="#">
+                                            <button class="btn btn-mini btn-info"><i class="icon-user"></i><span class="hidden-phone"> &nbsp;&nbsp;{{name}}</span></button>
+						
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Profile</a></li>
+						<li class="divider"></li>
+						<li><a href="login.html">Logout</a></li>
+					</ul>
+				</div>
+                                  {% else %}
+                                      <a href="{{path('spiralation_site_loginpage')}}"><button class="btn btn-mini btn-success"> Login</button></a>
+                                    
+                                    {% endif %}
 				</div>
 			</div>
 		</div>

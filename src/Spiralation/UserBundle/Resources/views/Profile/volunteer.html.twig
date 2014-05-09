@@ -5,15 +5,15 @@
     <div class="well nav-collapse sidebar-nav">
         <ul class="nav nav-tabs nav-stacked main-menu">
             <li class="nav-header hidden-tablet">Dashboard</li>
-             <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet"> Home</span></a></li>
+             <li><a class="ajax-link" href="{{path('homeV')}}"><i class="icon-home"></i><span class="hidden-tablet"> Home</span></a></li>
             
-            <li><a class="ajax-link" href="index.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> Opportunities</span></a></li>
-            <li><a class="ajax-link" href="ui.html"><i class="icon-user"></i><span class="hidden-tablet"> Profile</span></a></li>
-            <li><a class="ajax-link" href="form.html"><i class="icon-edit"></i><span class="hidden-tablet"> Following Organizations</span></a></li>
-            <li><a class="ajax-link" href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Events</span></a></li>
+            <li><a class="ajax-link" href="{{path('homeV')}}"><i class="icon-eye-open"></i><span class="hidden-tablet"> Opportunities</span></a></li>
+            <li><a class="ajax-link" href="{{path('homeV')}}"><i class="icon-user"></i><span class="hidden-tablet"> Profile</span></a></li>
+            <li><a class="ajax-link" href="{{path('homeV')}}"><i class="icon-edit"></i><span class="hidden-tablet"> Following Organizations</span></a></li>
+            <li><a class="ajax-link" href="{{path('homeV')}}"><i class="icon-list-alt"></i><span class="hidden-tablet"> Events</span></a></li>
             <li class="nav-header hidden-tablet">Settings</li>
-            <li><a class="ajax-link" href="table.html"><i class="icon-align-justify"></i><span class="hidden-tablet"> Account Settings</span></a></li>
-            <li><a class="ajax-link" href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Availability</span></a></li>
+            <li><a class="ajax-link" href="{{path('homeV')}}"><i class="icon-align-justify"></i><span class="hidden-tablet"> Account Settings</span></a></li>
+            <li><a class="ajax-link" href="{{path('homeV')}}"><i class="icon-calendar"></i><span class="hidden-tablet"> Availability</span></a></li>
 
         </ul>
     </div><!--/.well -->
@@ -22,7 +22,7 @@
 
 {% block content %}
 
-    <div class="box span10">                                
+    <div class="box span6">                                
         <div class="box-header well">                                            
             <h2><i class="icon-bell"></i> Notifications</h2>	
             <div class="box-icon">
@@ -38,20 +38,23 @@
                     <div class="box-content alerts">
                         <div class="alert alert-error">
                             <button type="button" class="close" data-dismiss="alert">×</button>
-                            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                            <strong>V force Workshop</strong> <br>
+                           Battaramulla Workshop postponed to 15th of May 
                         </div>
                         <div class="alert alert-success">
                             <button type="button" class="close" data-dismiss="alert">×</button>
-                            <strong>Well done!</strong> You successfully read this important alert message.
+                            <strong>World Conference Youth</strong> <br>
+                            Closing ceremony for WCY has rehearsals at 2.30 pm on 10th of May at BMICH
                         </div>
                         <div class="alert alert-info">
                             <button type="button" class="close" data-dismiss="alert">×</button>
-                            <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+                            <strong>Rotaract Gift a Smile</strong> <br>
+                            Need more volunteers and doners to make the Negombo session more successful. 
                         </div>
                         <div class="alert alert-block ">
                             <button type="button" class="close" data-dismiss="alert">×</button>
-                            <h4 class="alert-heading">Warning!</h4>
-                            <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                            <h4 class="alert-heading">Soyuru Sathkaraya</h4>
+                            <p>Schedule Planning on 20th of May</p>
                         </div>
                     </div>	
 
@@ -60,7 +63,7 @@
         </div>
     </div>
 
-<div class="box span10">
+<div class="box span4">
 					<div class="box-header well" data-original-title>
 						<h2><i class="icon-list"></i> Events this Week </h2>
 						<div class="box-icon">
@@ -75,56 +78,57 @@
 								<a href="#">
 									                              
 									<span class="green">May 10</span>
-									New Comments                                    
+                                                                        World Conference Youth
+                                                                  
 								</a>
 							</li>
 						  <li>
 							<a href="#">
 							
-							  <span class="red">May 10</span>
-							  New Registrations
+							  <span class="green">May 10</span>
+							  SoS Workshop
 							</a>
 						  </li>
 						  <li>
 							<a href="#">
 							
-							  <span class="blue">May 10</span>
-							  New Articles                                    
+							  <span class="green">May 10</span>
+							  Rotaract Gift a Smile                                    
 							</a>
 						  </li>
 						  <li>
 							<a href="#">
 							
 							  <span class="yellow">May 11</span>
-							  User reviews                                    
+							  LEO Conference                                 
 							</a>
 						  </li>
 						  <li>
 							<a href="#">
 							                            
-							  <span class="green">May 11</span>
-							  New Comments                                    
+							  <span class="yellow">May 11</span>
+							  V force workshop                                    
 							</a>
 						  </li>
 						  <li>
 							<a href="#">
 						
 							  <span class="red">May 12</span>
-							  New Registrations
+							  Beach Clean
 							</a>
 						  </li>
 						  <li>
 							<a href="#">
 						
-							  <span class="blue">May 12</span>
-							  New Articles                                    
+							  <span class="red">May 12</span>
+							  Green Dream                                  
 							</a>
 						  </li>
 						  <li>
 							<a href="#">
 					
-							  <span class="yellow">May 13</span>
-							  User reviews                                    
+							  <span class="blue">May 13</span>
+							  Next Challenge                                
 							</a>
 						  </li>
 						</ul>

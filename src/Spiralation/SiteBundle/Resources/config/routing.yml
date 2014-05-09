@@ -8,6 +8,9 @@ spiralation_site_loginpage:
 
 create_volunteer:
     pattern:  /register
-    defaults: { _controller: SpiralationSiteBundle:Register:form }
+    defaults: { _controller: SpiralationSiteBundle:Register:volunteer }
 
+create_organization:
+    pattern:  /addorganization
+    defaults: { _controller: SpiralationSiteBundle:Register:organization }
 

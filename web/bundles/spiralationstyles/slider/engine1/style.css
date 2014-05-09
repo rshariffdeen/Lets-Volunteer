@@ -58,19 +58,22 @@
 	padding:0;
 	margin:0;
 }
-#wowslider-container1 a{ 
+#wowslider-container1 a{
+    display: none;
 	text-decoration: none; 
 	outline: none; 
 	border: none; 
 }
 
-#wowslider-container1  .ws_bullets { 
+#wowslider-container1  .ws_bullets {
+    display: none;
 	font-size: 0px; 
 	float: left;
 	position:absolute;
 	z-index:70;
 }
 #wowslider-container1  .ws_bullets div{
+    display: none;
 	position:relative;
 	float:left;
 }
@@ -83,6 +86,7 @@
 }
 
 #wowslider-container1 .ws_photoItem {
+    display: none;
 	border: 2em solid #fff;
 	margin-left: -2em;
 	margin-top: -2em;

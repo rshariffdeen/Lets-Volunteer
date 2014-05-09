@@ -127,13 +127,13 @@
       {{form_label(form.password, 'New Password',{ 'label_attr': {'class': 'control-label'} })}}
                         
                         <div class="controls">
-                        {{form_widget(form.password)}}
+                        {{form_widget(form.password,{'type':'password'})}}
                                <span class="help-inline">{{ form_errors(form.password) }}</span>
                        </div></div>
                               <div class="control-group primary">         
       {{form_label(form.password, ' ',{ 'label_attr': {'class': 'control-label'} })}}   
                         <div class="controls">
-                        {{form_widget(form.submit,{'attr':{'class':'btn btn-success'}})}}                           
+                        {{form_widget(form.submit,{'attr':{'class':'btn btn-success span4'}})}}                           
                        </div></div>
                                     
                                     

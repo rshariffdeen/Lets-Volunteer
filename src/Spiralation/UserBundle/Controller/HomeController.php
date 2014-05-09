@@ -8,7 +8,6 @@ class HomeController extends Controller
 {
     public function organizationAction(Request $request)
     {
-        echo($request->getSession()->get('org_id'));
         return $this->render('SpiralationUserBundle:Profile:volunteer.html.twig');
     }
     

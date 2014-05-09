@@ -1,3 +1,7 @@
-profile:
+homeO:
     pattern:  /home
-    defaults: { _controller: SpiralationUserBundle:Profile:home }
+    defaults: { _controller: SpiralationUserBundle:Home:organization }
+
+homeV:
+    pattern:  /home
+    defaults: { _controller: SpiralationUserBundle:Home:volunteer }

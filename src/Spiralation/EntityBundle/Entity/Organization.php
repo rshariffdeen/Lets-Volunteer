@@ -220,4 +220,88 @@ class Organization
     {
         return $this->organizationId;
     }
+    /**
+     * @var string
+     */
+    private $email;
+
+    /**
+     * @var integer
+     */
+    private $phone;
+
+    /**
+     * @var string
+     */
+    private $password;
+
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return Organization
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string 
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set phone
+     *
+     * @param integer $phone
+     * @return Organization
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+    
+        return $this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return integer 
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * Set password
+     *
+     * @param string $password
+     * @return Organization
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string 
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
 }

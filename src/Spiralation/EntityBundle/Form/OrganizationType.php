@@ -22,7 +22,17 @@ class OrganizationType extends AbstractType
             ->add('rating')
             ->add('followers')
             ->add('projects')
+            ->add('email')
+            ->add('phone')
+            ->add('password')
         ;
+        
+         $builder 
+                ->add('submit','submit', array(
+                'label' => 'Register'
+                
+                
+            ));
     }
     
     /**

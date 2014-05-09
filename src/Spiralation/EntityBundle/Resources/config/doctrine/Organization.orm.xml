@@ -7,9 +7,12 @@
     <field name="name" type="string" column="name" length="30" nullable="false"/>
     <field name="city" type="string" column="city" length="30" nullable="false"/>
     <field name="details" type="text" column="details" nullable="false"/>
-    <field name="type" type="integer" column="type" nullable="false"/>
-    <field name="rating" type="float" column="rating" precision="10" scale="0" nullable="false"/>
+    <field name="type" type="string" column="type" length="20" nullable="false"/>
+    <field name="rating" type="float" column="rating" precision="10" scale="0" nullable="true"/>
     <field name="followers" type="string" column="followers" length="1000" nullable="false"/>
     <field name="projects" type="string" column="projects" length="1000" nullable="false"/>
+    <field name="email" type="string" column="email" length="40" nullable="false"/>
+    <field name="phone" type="integer" column="phone" nullable="false"/>
+    <field name="password" type="string" column="password" length="40" nullable="false"/>
   </entity>
 </doctrine-mapping>

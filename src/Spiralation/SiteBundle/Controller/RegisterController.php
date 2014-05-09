@@ -30,12 +30,16 @@ class RegisterController extends Controller
             $user = new User();
             $user->setPassword($volunteer->getPassword());
             $user->setRole(1);
-            $user->setVolunteer($volunteer->getVolunteerId());
-            $user->setEmail($volunteer->getEmail());
-        
+            $email = $volunteer->getEmail();
+            $user->setEmail($email);
+           
         try{
             $em = $this->getDoctrine()->getManager();
+            $repo = $em->getRepository('SpiralationEntityBundle:Volunteer');
             $em ->persist($volunteer);
+            echo"DONE";
+            $Volunteer = $repo->findOneBy(array('email'=>$email));
+            $user->setVolunteer($Volunteer->getVolunteerId());
             $em->persist($user);            
             $em->flush();
             }
@@ -104,7 +108,7 @@ class RegisterController extends Controller
         ));
         }
           
-           return $this->render('SpiralationSiteBundle:Register:register.html.twig', array('form' => $form->createView())); 
+           return $this->render('SpiralationSiteBundle:Register:registerOrg.html.twig', array('form' => $form->createView())); 
         
     }
     

@@ -1,0 +1,140 @@
+{% extends "SpiralationStylesBundle:Basic:basic.html.twig" %}
+{% block dashboard %}
+<!-- left menu starts -->
+<div class="span2 main-menu-span">
+    <div class="well nav-collapse sidebar-nav">
+        <ul class="nav nav-tabs nav-stacked main-menu">
+            <li class="nav-header hidden-tablet">Dashboard</li>
+             <li><a class="ajax-link" href="{{path('homeV')}}"><i class="icon-home"></i><span class="hidden-tablet"> Home</span></a></li>
+            
+            <li><a class="ajax-link" href="{{path('homeV')}}"><i class="icon-eye-open"></i><span class="hidden-tablet"> Opportunities</span></a></li>
+            <li><a class="ajax-link" href="{{path('homeV')}}"><i class="icon-user"></i><span class="hidden-tablet"> Profile</span></a></li>
+            <li><a class="ajax-link" href="{{path('homeV')}}"><i class="icon-edit"></i><span class="hidden-tablet"> Following Organizations</span></a></li>
+            <li><a class="ajax-link" href="{{path('homeV')}}"><i class="icon-list-alt"></i><span class="hidden-tablet"> Events</span></a></li>
+            <li class="nav-header hidden-tablet">Settings</li>
+            <li><a class="ajax-link" href="{{path('homeV')}}"><i class="icon-align-justify"></i><span class="hidden-tablet"> Account Settings</span></a></li>
+            <li><a class="ajax-link" href="{{path('homeV')}}"><i class="icon-calendar"></i><span class="hidden-tablet"> Availability</span></a></li>
+
+        </ul>
+    </div><!--/.well -->
+</div><!--/span-->
+{% endblock %}
+
+{% block content %}
+
+    <div class="box span6">                                
+        <div class="box-header well">                                            
+            <h2><i class="icon-bell"></i> Notifications</h2>	
+            <div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+        </div>
+        <div class="box-content ">
+            <div id="content" class="span12">
+
+                <div class="row-fluid">
+                    <div class="box-content alerts">
+                        <div class="alert alert-error">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>V force Workshop</strong> <br>
+                           Battaramulla Workshop postponed to 15th of May 
+                        </div>
+                        <div class="alert alert-success">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>World Conference Youth</strong> <br>
+                            Closing ceremony for WCY has rehearsals at 2.30 pm on 10th of May at BMICH
+                        </div>
+                        <div class="alert alert-info">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>Rotaract Gift a Smile</strong> <br>
+                            Need more volunteers and doners to make the Negombo session more successful. 
+                        </div>
+                        <div class="alert alert-block ">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <h4 class="alert-heading">Soyuru Sathkaraya</h4>
+                            <p>Schedule Planning on 20th of May</p>
+                        </div>
+                    </div>	
+
+                </div><!--/span-->
+            </div>
+        </div>
+    </div>
+
+<div class="box span4">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-list"></i> Events this Week </h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<ul class="dashboard-list">
+							<li>
+								<a href="#">
+									                              
+									<span class="green">May 10</span>
+                                                                        World Conference Youth
+                                                                  
+								</a>
+							</li>
+						  <li>
+							<a href="#">
+							
+							  <span class="green">May 10</span>
+							  SoS Workshop
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+							
+							  <span class="green">May 10</span>
+							  Rotaract Gift a Smile                                    
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+							
+							  <span class="yellow">May 11</span>
+							  LEO Conference                                 
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+							                            
+							  <span class="yellow">May 11</span>
+							  V force workshop                                    
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+						
+							  <span class="red">May 12</span>
+							  Beach Clean
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+						
+							  <span class="red">May 12</span>
+							  Green Dream                                  
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+					
+							  <span class="blue">May 13</span>
+							  Next Challenge                                
+							</a>
+						  </li>
+						</ul>
+					</div>
+				</div><!--/span-->
+			</div><!--/row-->
+
+
+{% endblock %}

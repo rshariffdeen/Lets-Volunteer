@@ -185,7 +185,7 @@
 						
 					</div>
 					<div class="box-content">
-                                            <table class="table table-striped">
+                                           <table class="table table-striped">
 							  <thead>
 								  <tr>
 									  <th>Event</th>
@@ -195,22 +195,49 @@
 								  </tr>
 							  </thead>   
 							  <tbody>
-                                                              {% if event is defined %}
-                                                                    {% for i in event %}
 								<tr>
-									<td>{{i.name}}</td>
-									<td class="center">i.date</td>
-									<td class="center">i.details</td>
+									<td>World Conference Youth</td>
+									<td class="center">2014/05/07</td>
 									<td class="center">
-										<span class="label label-success">i.status</span>
+World Conference on Youth 2014 will take place from 6th to 10th May, 2014 at Bandaranaike Memorial International Conference Hall in Colombo, Sri Lanka. </td>
+									<td class="center">
+										<span class="label label-success">On going</span>
 									</td>                                       
 								</tr>
-								
-								{% endfor %}
-								{% endif %}
-								                         
+								<tr>
+									<td>Gift a Smile</td>
+									<td class="center">2014/05/14</td>
+									<td class="center">Gift a Smile by Rotaract Club, will take place at Negombo on the 14th of May from 3 pm onward</td>
+									<td class="center">
+										<span class="label label-important">Scheduled</span>
+									</td>                                       
+								</tr>
+								<tr>
+									<td>LEO Conference</td>
+									<td class="center">2014/06/01</td>
+									<td class="center">Conference on environmental protection by LEO Sri Lanka will take palce at Youth Center, Maharagama</td>
+									<td class="center">
+										<span class="label label-important">Scheduled</span>
+									</td>                                        
+								</tr>
+								<tr>
+									<td>Soyuru Sathkaraya</td>
+									<td class="center">2014/06/21</td>
+									<td class="center">Reconciliation program for  School children at Vavuniya organized by SLWT</td>
+									<td class="center">
+										<span class="label label-warning">Pending</span>
+									</td>                                       
+								</tr>
+								<tr>
+									<td>Beach Clean</td>
+									<td class="center">2014/06/25</td>
+									<td class="center">Full beach clean out from wellawatte to Mount Lavinia, organized by a group of people in the nearby area</td>
+									<td class="center">
+										<span class="label ">Inactive</span>
+									</td>                                        
+								</tr>                                   
 							  </tbody>
-						 </table>  
+						 </table> 
 						 <div class="pagination pagination-centered">
 						  <ul>
 							<li><a href="#">Prev</a></li>

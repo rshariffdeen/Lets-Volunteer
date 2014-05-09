@@ -81,7 +81,7 @@
                             <a class="brand" href="{{path('spiralation_site_homepage')}}"> <img src="{{asset('bundles/spiralationstyles/img/logo.png')}}" /></a>
 
 				<div class="pull-right" >
-					<button class="btn btn-mini btn-success" href="{{path('create_volunteer')}}"> Login</button>
+                                    <a href="{{path('spiralation_site_loginpage')}}"><button class="btn btn-mini btn-success"> Login</button></a>
 					
 				</div>
 			</div>
@@ -124,12 +124,14 @@
 					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
 				</div>
 			</noscript>
-                </div>
-                </div>
+               
         
                         
 			{% block content %}
 			{% endblock %}
+                        
+                         </div>
+                </div>
                                 <hr>
 		<footer>
                     <p class="pull-left"><strong>Spiralation </strong>&copy; 2014

@@ -1,0 +1,136 @@
+{% extends "SpiralationStylesBundle:Basic:basic.html.twig" %}
+{% block dashboard %}
+<!-- left menu starts -->
+<div class="span2 main-menu-span">
+    <div class="well nav-collapse sidebar-nav">
+        <ul class="nav nav-tabs nav-stacked main-menu">
+            <li class="nav-header hidden-tablet">Dashboard</li>
+             <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet"> Home</span></a></li>
+            
+            <li><a class="ajax-link" href="index.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> Opportunities</span></a></li>
+            <li><a class="ajax-link" href="ui.html"><i class="icon-user"></i><span class="hidden-tablet"> Profile</span></a></li>
+            <li><a class="ajax-link" href="form.html"><i class="icon-edit"></i><span class="hidden-tablet"> Following Organizations</span></a></li>
+            <li><a class="ajax-link" href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Events</span></a></li>
+            <li class="nav-header hidden-tablet">Settings</li>
+            <li><a class="ajax-link" href="table.html"><i class="icon-align-justify"></i><span class="hidden-tablet"> Account Settings</span></a></li>
+            <li><a class="ajax-link" href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Availability</span></a></li>
+
+        </ul>
+    </div><!--/.well -->
+</div><!--/span-->
+{% endblock %}
+
+{% block content %}
+
+    <div class="box span10">                                
+        <div class="box-header well">                                            
+            <h2><i class="icon-bell"></i> Notifications</h2>	
+            <div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+        </div>
+        <div class="box-content ">
+            <div id="content" class="span12">
+
+                <div class="row-fluid">
+                    <div class="box-content alerts">
+                        <div class="alert alert-error">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                        </div>
+                        <div class="alert alert-success">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>Well done!</strong> You successfully read this important alert message.
+                        </div>
+                        <div class="alert alert-info">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+                        </div>
+                        <div class="alert alert-block ">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <h4 class="alert-heading">Warning!</h4>
+                            <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                        </div>
+                    </div>	
+
+                </div><!--/span-->
+            </div>
+        </div>
+    </div>
+
+<div class="box span10">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-list"></i> Events this Week </h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<ul class="dashboard-list">
+							<li>
+								<a href="#">
+									                              
+									<span class="green">May 10</span>
+									New Comments                                    
+								</a>
+							</li>
+						  <li>
+							<a href="#">
+							
+							  <span class="red">May 10</span>
+							  New Registrations
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+							
+							  <span class="blue">May 10</span>
+							  New Articles                                    
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+							
+							  <span class="yellow">May 11</span>
+							  User reviews                                    
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+							                            
+							  <span class="green">May 11</span>
+							  New Comments                                    
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+						
+							  <span class="red">May 12</span>
+							  New Registrations
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+						
+							  <span class="blue">May 12</span>
+							  New Articles                                    
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+					
+							  <span class="yellow">May 13</span>
+							  User reviews                                    
+							</a>
+						  </li>
+						</ul>
+					</div>
+				</div><!--/span-->
+			</div><!--/row-->
+
+
+{% endblock %}

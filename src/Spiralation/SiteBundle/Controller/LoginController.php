@@ -34,11 +34,13 @@ class LoginController extends Controller
                 if($volunteer != null){
                     $vol_id = $volunteer->getVolunteerId();
                     $session->set('vol_id', $vol_id);
+                    $session->set('name',$volunteer->getFirstName);
 
                     return $this->redirect($this->generateUrl('homeV', array('id' => $vol_id)));
                 }elseif($organization != null){
                     $org_id = $organization->getOrganizationId();
                     $session->set('org_id',$org_id);
+                    $session->set('name',$organization->getName());
 
                     return $this->redirect($this->generateUrl('homeO', array('id' => $org_id)));
                 }
